@@ -1,0 +1,153 @@
+@import "./_mixins.scss";
+@import "./_media.scss";
+@import "./_btn.scss";
+@import "./_variables.scss";
+
+@font-face {
+    font-family: "inter_Bold";
+    src: url("/police/Inter-Bold.otf");
+}
+
+@font-face {
+    font-family: "inter_Medium";
+    src: url("/police/Inter-Medium.otf");
+}
+
+@font-face {
+    font-family: "inter_Regular";
+    src: url("/police/Inter-Regular.otf");
+}
+
+@font-face {
+    font-family: "inter_SemiBold";
+    src: url("/police/Inter-SemiBold.otf");
+}
+
+
+body{
+    padding: 32px;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.header{
+    nav{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        img{
+            margin-right: 34px;
+        }
+        .box_nav{
+            display: flex;
+            align-items: center;
+            a{
+                width: 82px;
+                height: 20px;
+                font-size: 16px;
+                margin-right: 25px;
+            }
+        }
+    }
+    .label_agence{
+        display: flex;
+        flex-direction: column;
+        .label_1{
+            width: 234px;
+            height: 56px;
+            font-size: 20px;
+        }
+    }
+    .phone_number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        right: 45px;
+        width: 305px;
+        height: 52px;
+        border: 1px solid black;
+        border-radius: 30px;
+        color: white;
+        background-color: black;
+        box-shadow: 1px 0px 16px 0px rgb(0 0 0 / 35%);
+        font-size: 18px;
+    }
+}
+
+.presentation{
+    margin-top: 322px;
+    margin-left: 56px;
+    @include box_presentation;
+}
+
+.avantages{
+    margin-top: 200px;
+    margin-left: 56px;
+    @include box_avantages;
+}
+
+.info{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 56px;
+    @include box_info;
+}
+
+.box_adress{
+    display: flex;
+    margin-top: 284px;
+    margin-left: 0px;
+    width: 1493px;
+    height: 652px;
+    background-image: url("/logos/bitmap_map.png");
+    @include box_adress;
+}
+
+.box_services{
+    .background_image{
+        position: absolute;
+        top: 2465px;
+    }
+    .general{
+        position: relative;
+        @include box_service;
+    }
+}
+
+.box_about{
+    margin-top: 165px;
+    margin-left: 180px;
+    width: 1080px;
+    height: 748px;
+    @include box_about_us;
+}
+
+.box_contact{
+    display: flex;
+    width: 1440px;
+    height: 868px;
+    margin-top: 157px;
+    background-image: url("/logos/bitmap_laptop.png");
+    @include box_contact;
+}
+
+.box_footer{
+    width: 1440px;
+    height: 510px;
+    background-color: $color-black;
+    border-top: 8px solid $color-green;
+    p{
+        margin: 7px
+    }
+    @include box_footer;
+}

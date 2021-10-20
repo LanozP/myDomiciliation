@@ -1,0 +1,548 @@
+@mixin box_presentation {
+    .box_presentation{
+        .fifi{
+            position: absolute;
+            width: 1194px;
+            height: 1593px;
+            margin-top: -961px;
+            margin-left: 455px;
+            background-image: url("/logos/image_coffee.png");
+        }
+        .title{
+            position: relative;
+            font-size: 50px;
+            font-family: $font-family_bold;
+        }
+        .title_label{
+            font-size: 22px;
+            color: $color-gray;
+        }
+        .title_label_2{
+            font-size: 22px;
+            margin-top: -7px;
+            color: $color-gray;
+        }
+        .formule{
+            margin-top: 40px;
+            font-family: $font-family_regular;
+            @include btn_formule;
+        }
+    }
+}
+
+@mixin box_avantages {
+    .box_avantages{
+        .label_3{
+            font-family: $font-family_bold;
+            margin-left: 86px;
+            width: 552px;
+            height: 40px;
+            font-size: 34px;
+            margin-top: 0px;
+        }
+        .label_4{
+            font-family: $font-family_regular;
+            left: 56px;
+            font-size: 22px;
+        }
+    }
+}
+
+@mixin box_info {
+    .box{
+        width: 405px;
+        height: 132px;
+        margin-right: 57px;
+        .box_info_a{
+            
+            .box_info_img{
+                display: flex;
+                .img_1{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    margin-right: 17px;
+                }
+                .img_label{
+                    font-family: $font-family_semiBold;
+                    color: $color-green;
+                    font-size: 18px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                }
+            }            
+            .box_sep_label{
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                .img_separateur{
+
+                }
+                .info_label{
+                    color: $color-gray;
+                    font-size: 16px;
+                    margin-bottom: 56px;
+                }
+            
+            }  
+        }
+    
+        .box_info_b{
+
+            .box_info_img{
+                display: flex;
+                .img_1{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    margin-right: 17px;
+                }
+                .img_label{
+                    font-family: $font-family_semiBold;
+                    color: $color-blue;
+                    font-size: 18px;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                }
+            }            
+            .box_sep_label{
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                .img_separateur{
+
+                }
+                .info_label{
+                    color: $color-gray;
+                    font-size: 16px;
+                }
+            
+            }  
+        }
+        .margin{
+            margin-bottom: 42px;
+        }
+    }
+}
+
+@mixin box_adress {
+    .map_pin{
+        width: 56px;
+        height: 69px;
+        margin-top: 315px;
+        margin-left: 380px;
+    }
+    .adress_info{
+        margin-top: 145px;
+        margin-left: 281px;
+        width: 530px;
+        height: 410px;
+        border: 1px solid $color-green_light;
+        border-radius: 10px;
+        background-color: white;
+        .adress_info__box{
+            width: 510px;
+            margin-left: 40px;
+            margin-top: 48px;
+            .title{
+                font-family: $font-family_semiBold;
+                font-size: 30px;
+                margin: 0;
+            }
+            .title_label{
+                font-size: 14px;
+                width: 466px;
+                height: 72px;
+                color: $color-gray;
+                font-family: $font-family_regular;
+                margin: 0;
+                margin-top: 26px;
+            }
+            .choose_label{
+                font-family: $font-family_semiBold;
+            }
+            .adresses{
+                display: flex;
+                margin-top: 24px;
+                .adress{
+                    display: flex;
+                    width: 180px;
+                    height: 44px;
+                    margin-right: 89px;
+                    margin-bottom: 32px;
+                    .adress__img{
+                        display: flex;
+                        align-items: center;
+                        .map_pin_small{
+                            margin-right: 16px;
+                            width: 24px;
+                            height: 30px;
+                        }
+                    }
+                    .adress__box_label{
+                        display: flex;
+                        flex-direction: column;
+                        .adress_label{
+                            width: 180px;
+                            font-family: $font-family_regular;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin box_service {
+    .boxes_services{
+        display: flex;
+        width: 100%;
+    }
+    .box_services_a{
+        margin-right: 202px;
+        margin-top: 96px;
+        margin-left: 56px;
+        .box_services_a_title{
+            width: 490px;
+            height: 40px;
+            font-size: 34px;
+            font-family: $font-family_bold;
+        }
+        .box_services_a_title_label{
+            font-family: $font-family_regular;
+            font-size: 17px;
+            margin: 8px;
+        }
+
+    }
+    .box_services_b{
+        margin-top: 96px;
+        margin-right: 56px;
+        font-family: $font-family_regular;
+        .box{
+            width: 636px;
+            height: 504px;
+            border: 1px solid $color-green_light;
+            border-radius: 16px;
+            margin-top: 30px;
+            box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 25%);
+            font-size: 20px;
+            padding-left: 20px;
+            .title{
+                font-family: $font-family_semiBold;
+            }
+            .box_a_label{
+                color: $color-gray;
+            }
+        }
+        .box_b{
+            width: 636px;
+            height: 424px;
+            margin-top: 40px;
+            .box_b_title{
+                font-family: $font-family_semiBold;
+            }
+            .box_b_label{
+                color: $color-gray;
+            }
+        }
+
+    }
+    .formule_title{
+        justify-content: center;
+        margin-left: 360.5px;
+        width: 719px;
+        height: 40px;
+        text-align: center;
+        .formule_title_label{
+            font-size: 32px;
+            margin-top: 120px;
+            font-family: $font-family_bold;
+        }
+        .formule_title_logo{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .boxes_formules{
+        margin-top: 118px;
+        margin-left: 56px;
+        margin-right: 39px;
+        display: flex;
+        justify-content: space-between;
+        .box_formules{
+            width: 405px;
+            height: 565px;
+            margin-right: 50px;
+            border: 1px solid $color-green_light;
+            border-radius: 16px;
+            box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 25%);
+            .box_formules_badge{
+                margin-left: 24px;
+                .box_formules_title{
+                    display: flex;
+                    .box_formules_title_leaf{
+                        width: 92px;
+                        height: 92px;
+                        margin-top: 32px;
+                    }
+                    .box_formules_label{
+                        margin-left: 10px;
+                        margin-top: 40px;
+                        .box_formules_title_H1{
+                            font-size: 28px;
+                            margin-top: 0px;
+                            margin-bottom: 0px;
+                            font-family: $font-family_semiBold;
+                        }
+                        .box_formules_details{
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .opacity{
+            background-color: rgba(255, 255, 255, 0.5);
+            margin-right: 0px;
+        }
+        .boxes_details{
+            height: 156px;
+            margin-left: 56px;
+            margin-top: 24px;
+            .box_formules_details{
+                height: 40px;
+                font-size: 14px;
+                display: flex;
+                .box_formules_details_check{
+                    // background-image: url("/logos/check_white.png");
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 16px;
+                }
+                .box_formules_details_label{
+                    font-family: $font-family_regular;
+                    margin: 0;
+                }
+                .box_formules_details_oval{
+                    width: 16px;
+                    height: 16px;
+                    margin-left: 16px;
+                }
+            }
+        }
+        .box_formules_choice{
+            .box_formules_choice_a{
+                margin-top: 60px;
+                display: flex;
+                margin-left: 148px;
+                .box_formules_number{
+                    font-size: 32px;
+                    font-weight: bolder;
+                    margin-right: 5px;
+                }
+                .box_formules_months{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .box_formules_choice_b{
+                margin-left: 87px;
+                @include btn_formule;
+                width: 231px;
+                height: 56px;
+                font-size: 18px;
+                background-color: white;
+            }
+        }
+    }
+    .box_formules:hover{
+        box-shadow: 0px 2px 10px 1px #c4c4c4;
+        background-color: rgba(255, 255, 255, 0.9);
+        .box_formules_details_check{
+            content: url("/logos/check_green.png");
+        }
+        .box_formules_choice_b{
+            background-color: black;
+            color: white;
+            box-shadow: 1px 0px 16px 1px rgb(55, 161, 115)
+        }
+    }
+}
+
+
+@mixin box_about_us {
+    .formule_title{
+        height: 40px;
+        text-align: center;
+        .formule_title_label{
+            font-size: 32px;
+            font-family: $font-family_bold;
+        }
+        .formule_title_logo{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .boxes_worker{
+        display: flex;
+        margin-top: 116px;
+        justify-content: space-between;
+        .box_worker{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 256px;
+            height: 374px;
+        }
+        .box_worker_img{
+            width: 232px;
+            height: 232px;
+        }
+        .box_worker_name{
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            font-family: $font-family_semiBold;
+        }
+        .box_worker_label{
+            margin: 2px;
+            color: $color-gray;
+            font-family: $font-family_regular;
+            font-size: 14px;
+        }
+        .hidden{
+            color: transparent;
+        }
+    }
+    .box_worker_details{
+        width: 1080px;
+        height: 128px;
+        font-family: $font-family_regular;
+        font-size: 18px;
+        margin-top: 80px;
+        .box_worker_details_label{
+            margin: 8px;
+        }
+    }
+}
+
+@mixin box_contact{
+    .box_contact_form{
+        width: 800px;
+        height: 636px;
+        margin-top: 116px;
+        margin-left: 320px;
+        background-color: white;
+        border: 1px solid $color-green_light;
+        input{
+            border: transparent;
+            outline: none;
+        }
+        .box_contact_title{
+            font-family: $font-family_bold;
+            font-size: 32px;
+            margin-top: 80px;
+            margin-left: 80px;
+            width: 640px;
+            height: 80px;
+            border-bottom: 1px solid $color-green;
+        }
+        .form_a{
+            margin-top: 41px;
+            margin-left: 80px;
+            display: flex;
+            .form_label{
+                font-family: $font-family_regular;
+                border-bottom: 1px solid rgb(199, 183, 183);
+                width: 280px;
+                height: 41px;
+                display: flex;
+                flex-direction: column;
+                margin-right: 80px;
+            }
+        }
+        .form_b{
+            margin-top: 40px;
+            margin-left: 80px;
+            display: flex;
+            .form_label{
+                font-family: $font-family_regular;
+                border-bottom: 1px solid rgb(199, 183, 183);
+                width: 280px;
+                height: 41px;
+                display: flex;
+                flex-direction: column;
+                margin-right: 80px;
+            }
+        }
+        .form_c{
+            margin-top: 40px;
+            margin-left: 80px;
+            .form_c_yourMessage{
+                font-family: $font-family_regular;
+                width: 640px;
+                height: 113px;
+                border-bottom: 1px solid rgb(199, 183, 183);
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .box_contact_submit{
+            margin-top: 40px;
+            margin-left: 272px;
+            @include btn_formule;
+            background-color: rgb(209, 213, 216);
+            color: white;
+            box-shadow: none
+
+        }
+    }
+}
+
+@mixin box_footer{
+    font-family: $font-family_regular;
+    font-size: 12px;
+    color: white;
+    .box_footer_a{
+        display: flex;
+        .footer_logo_gray{
+            margin-top: 96px;
+            margin-left: 56px;
+            width: 219px;
+            height: 56px;
+        }
+    }
+    .footer_details{
+        margin-top: 104px;
+        margin-left: 127px;
+        width: 636px;
+        height: 100px;
+    }
+    .footer_details_contact{
+        margin-top: 104px;
+        margin-left: 56px;
+        width: 234px;
+        height: 100px;
+    }
+    .box_footer_b{
+        display: flex;
+        .footer_b_details{
+            margin-top: 100px;
+            margin-left: 56px;
+            width: 290px;
+            height: 120px;
+        }
+    }
+    .legals{
+        width: 864px;
+        height: 24px;
+        margin-top: 48px;
+        margin-left: 288px;
+        display: flex;
+    }
+}
