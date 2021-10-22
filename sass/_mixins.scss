@@ -9,14 +9,11 @@
             height: 1593px;
             margin-top: -961px;
             margin-left: 455px;
-            background-image: url("/logos/image_coffee.png");
             @media #{$media-down} {
-                z-index: 0;
-                width: 375px;
-                height: 1745px;
-                margin-top: -383px;
-                margin-left: 38px;
-                background-image: none;
+                width: 338px;
+                height: 338px;
+                margin-top: -370px;
+                margin-left: 37px;
             }
         }
         .title{
@@ -81,6 +78,7 @@
             left: 56px;
             font-size: 22px;
             @media #{$media-down}{
+                width: 90%;
                 font-size: 16px;
         }
         }
@@ -93,14 +91,14 @@
         height: 132px;
         margin-right: 57px;
         @media #{$media-down}{
-            width: 320px;
+            width: 80%;
             height: 275px;
             margin-bottom: 0;
             display: table;
         }
         .box_info_a{
             @media #{$media-down}{
-                width: 375px;
+                width: 90%;
                 height: 136px;
                 margin-top: 20px;
             } 
@@ -133,7 +131,7 @@
                 flex-direction: column;
                 margin-top: 25px;
                     @media #{$media-down}{
-                        width: 375px;
+                        width: 90%;
                         margin-top: 16px;
                     }
                 .img_separateur{
@@ -152,7 +150,7 @@
     
         .box_info_b{
             @media #{$media-down}{
-                width: 375px;
+                width: 90%;
                 height: 136px;
                 margin-top: 20px;
             } 
@@ -185,6 +183,7 @@
                 flex-direction: column;
                 margin-top: 25px;
                 @media #{$media-down}{
+                    width: 90%;
                     margin-top: 16px;
                 }
                 .img_separateur{
@@ -243,10 +242,10 @@
         background-color: white;
         @media #{$media-down}{
             position: relative  ;
-            width: 325px;
+            width: 90%;
             height: 432px;
             top: 56px;
-            margin-left: 25px;
+            margin-left: 20px;
             opacity: 0.9;
             margin-top: 16px;
         }
@@ -271,7 +270,7 @@
                 margin: 0;
                 margin-top: 26px;
                 @media #{$media-down}{
-                    width: 256px;
+                    width: 50%;
                     font-size: 14px;
                     margin-top: 16px;
                 }
@@ -293,6 +292,7 @@
                     margin-right: 89px;
                     margin-bottom: 32px;
                     @media #{$media-down}{
+                        width: 65%;
                         margin-bottom: 0;
                         align-items: center;
                     }
@@ -312,6 +312,7 @@
                         display: flex;
                         flex-direction: column;
                         @media #{$media-down}{
+                            width: 80%;
                             flex-direction: row;
                         }
                         .adress_label{
@@ -319,7 +320,7 @@
                             font-family: $font-family_regular;
                             margin: 5px;
                             @media #{$media-down}{
-                                width: 145px;
+                                width: 100%;
                                 margin: 0;
                                 font-size: 14px;
                             }
@@ -349,7 +350,7 @@
         margin-top: 96px;
         margin-left: 56px;
         @media #{$media-down}{
-            width: 345px;
+            width: 90%;
             margin-top: 37px;
             margin-left: 16px;
             margin-right: 0;
@@ -360,7 +361,7 @@
             font-size: 34px;
             font-family: $font-family_bold;
             @media #{$media-down}{
-                width: 345px;
+                width: 90%;
                 font-size: 24px;
             }
         }
@@ -370,7 +371,7 @@
             margin: 8px;
             @media #{$media-down}{
                 margin: 0;
-                width: 345px;
+                width: 90%;
             }
         }
 
@@ -380,7 +381,6 @@
         margin-right: 56px;
         font-family: $font-family_regular;
         @media #{$media-down}{
-            width: 375px;
             margin-right: 0;
             margin-left: 16px;
             margin-top: 50px;
@@ -395,9 +395,7 @@
             font-size: 20px;
             padding-left: 20px;
             @media #{$media-down}{
-                width: 345px;
-                height: 435px;
-                margin-top: 0;
+                width: 95%;
             }
             .title{
                 font-family: $font-family_semiBold;
@@ -414,7 +412,7 @@
             height: 424px;
             margin-top: 40px;
             @media #{$media-down}{
-                width: 345px;
+                width: 95%;
                 height: 385px;
             }
             .box_b_title{
@@ -436,7 +434,7 @@
         height: 40px;
         text-align: center;
         @media #{$media-down}{
-            width: 375px;
+            width: 100%;
             margin-left: 0;
         }
         .formule_title_label{
@@ -444,8 +442,8 @@
             margin-top: 120px;
             font-family: $font-family_bold;
             @media #{$media-down}{
-                font-size: 25px;
-                margin-top: 51px;
+                font-size: 22px;
+                margin-top: 50px;
             }
         }
         .formule_title_logo{
@@ -460,10 +458,11 @@
         display: flex;
         justify-content: space-between;
         @media #{$media-down}{
+            margin-top: 105px;
             display: block;
             margin-right: 0;
             margin-left: 16px;
-            width: 375px;
+            width: 100%;
         }
         .box_formules{
             width: 405px;
@@ -473,7 +472,7 @@
             border-radius: 16px;
             box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 25%);
             @media #{$media-down}{
-                width: 345px;
+                width: 90%;
                 margin-top: 16px;
             }
             .boxes_details{
@@ -620,7 +619,7 @@
             width: 256px;
             height: 374px;
             @media #{$media-down}{
-                width: 345px;
+                width: 90%;
                 margin-left: 0;
                 margin-top: 32px;
             }
@@ -655,7 +654,7 @@
         font-size: 18px;
         margin-top: 80px;
         @media #{$media-down}{
-            width: 345px;
+            width: 90%;
             height: 310px;
             margin-left: 16px;
             text-align: center;
@@ -676,7 +675,7 @@
         border: 1px solid $color-green_light;
         border-radius: 28px;
         @media #{$media-down}{
-            width: 345px;
+            width: 90%;
             height: 524px;
             margin-left: 16px;
             border-radius: 28px;
@@ -696,7 +695,7 @@
             @media #{$media-down}{
                 margin-top: 40px;
                 margin-left: 16px;
-                width: 280px;
+                width: 60%;
                 height: 60px;
                 font-size: 22px;
             }
@@ -761,7 +760,7 @@
                 flex-direction: column;
                 @media #{$media-down}{
                     height: 60px;
-                    width: 280px;
+                    width: 60%;
                 }
             }
         }
@@ -846,7 +845,7 @@
         margin-left: 288px;
         display: flex;
         @media #{$media-down}{
-            width: 345px;
+            width: 90%;
             display: block;
             margin-top: 310px;
             margin-left: 16px;
