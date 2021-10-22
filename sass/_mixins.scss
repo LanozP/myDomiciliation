@@ -1,26 +1,52 @@
 @mixin box_presentation {
     .box_presentation{
-        .fifi{
+        @media #{$media-down} {
+            margin-top: 380px;
+        }
+        .box_presentation_img{
             position: absolute;
             width: 1194px;
             height: 1593px;
             margin-top: -961px;
             margin-left: 455px;
             background-image: url("/logos/image_coffee.png");
+            @media #{$media-down} {
+                z-index: 0;
+                width: 375px;
+                height: 1745px;
+                margin-top: -383px;
+                margin-left: 38px;
+                background-image: none;
+            }
         }
         .title{
             position: relative;
             font-size: 50px;
             font-family: $font-family_bold;
+            @media #{$media-down} {
+                margin-top: 380px;
+                margin-left: 16px;
+                font-size: 32px;
+            }
         }
         .title_label{
             font-size: 22px;
             color: $color-gray;
+            @media #{$media-down} {
+                font-size: 14px;
+                margin-left: 16px;
+                margin-bottom: 10px;
+            }
         }
         .title_label_2{
+            width: 200px;
             font-size: 22px;
             margin-top: -7px;
             color: $color-gray;
+            @media #{$media-down} {
+                font-size: 14px;
+                margin-left: 16px;
+            }
         }
         .formule{
             margin-top: 40px;
@@ -32,6 +58,9 @@
 
 @mixin box_avantages {
     .box_avantages{
+        @media #{$media-down}{
+            margin-top: 40px;
+        }
         .label_3{
             font-family: $font-family_bold;
             margin-left: 86px;
@@ -39,11 +68,21 @@
             height: 40px;
             font-size: 34px;
             margin-top: 0px;
+            @media #{$media-down}{
+                width: 343px;
+                height: 64px;
+                margin-left: 0;
+                font-size: 28px;
+                margin-bottom: 5px;
+           }
         }
         .label_4{
             font-family: $font-family_regular;
             left: 56px;
             font-size: 22px;
+            @media #{$media-down}{
+                font-size: 16px;
+        }
         }
     }
 }
@@ -53,8 +92,18 @@
         width: 405px;
         height: 132px;
         margin-right: 57px;
+        @media #{$media-down}{
+            width: 320px;
+            height: 275px;
+            margin-bottom: 0;
+            display: table;
+        }
         .box_info_a{
-            
+            @media #{$media-down}{
+                width: 375px;
+                height: 136px;
+                margin-top: 20px;
+            } 
             .box_info_img{
                 display: flex;
                 .img_1{
@@ -62,6 +111,10 @@
                     height: 40px;
                     font-size: 18px;
                     margin-right: 17px;
+                    @media #{$media-down}{
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
                 .img_label{
                     font-family: $font-family_semiBold;
@@ -70,26 +123,39 @@
                     margin: 0;
                     display: flex;
                     align-items: center;
+                    @media #{$media-down}{
+                        font-size: 14px;
+                    }
                 }
             }            
             .box_sep_label{
                 display: flex;
                 flex-direction: column;
                 margin-top: 25px;
+                    @media #{$media-down}{
+                        width: 375px;
+                        margin-top: 16px;
+                    }
                 .img_separateur{
-
                 }
                 .info_label{
                     color: $color-gray;
                     font-size: 16px;
                     margin-bottom: 56px;
+                    @media #{$media-down}{
+                        margin-bottom: 16px;
+                    }
                 }
             
             }  
         }
     
         .box_info_b{
-
+            @media #{$media-down}{
+                width: 375px;
+                height: 136px;
+                margin-top: 20px;
+            } 
             .box_info_img{
                 display: flex;
                 .img_1{
@@ -97,6 +163,10 @@
                     height: 40px;
                     font-size: 18px;
                     margin-right: 17px;
+                    @media #{$media-down}{
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
                 .img_label{
                     font-family: $font-family_semiBold;
@@ -105,43 +175,81 @@
                     margin: 0;
                     display: flex;
                     align-items: center;
+                    @media #{$media-down}{
+                        font-size: 14px;
+                    }
                 }
             }            
             .box_sep_label{
                 display: flex;
                 flex-direction: column;
                 margin-top: 25px;
+                @media #{$media-down}{
+                    margin-top: 16px;
+                }
                 .img_separateur{
 
                 }
                 .info_label{
                     color: $color-gray;
                     font-size: 16px;
+                    @media #{$media-down}{
+                        margin-bottom: 16px;
+                    }
                 }
             
             }  
         }
         .margin{
             margin-bottom: 42px;
+            @media #{$media-down}{
+                margin-bottom: 0;
+            }
         }
     }
 }
 
 @mixin box_adress {
+    .background_map{
+        position: absolute;
+        width: 1493px;
+        height: 652px;
+        @media #{$media-down}{
+            position: absolute;
+            width: 375px;
+            height: 544px;
+            object-fit: cover;
+        }
+    }
     .map_pin{
+        position: absolute;
         width: 56px;
         height: 69px;
         margin-top: 315px;
         margin-left: 380px;
+        @media #{$media-down}{
+            margin-top: 300px;
+            margin-left: 110px;
+        }
     }
     .adress_info{
+        position: relative;
         margin-top: 145px;
-        margin-left: 281px;
+        margin-left: 717px;
         width: 530px;
         height: 410px;
         border: 1px solid $color-green_light;
         border-radius: 10px;
         background-color: white;
+        @media #{$media-down}{
+            position: relative  ;
+            width: 325px;
+            height: 432px;
+            top: 56px;
+            margin-left: 25px;
+            opacity: 0.9;
+            margin-top: 16px;
+        }
         .adress_info__box{
             width: 510px;
             margin-left: 40px;
@@ -150,6 +258,9 @@
                 font-family: $font-family_semiBold;
                 font-size: 30px;
                 margin: 0;
+                @media #{$media-down}{
+                    font-size: 20px;
+                }
             }
             .title_label{
                 font-size: 14px;
@@ -159,6 +270,11 @@
                 font-family: $font-family_regular;
                 margin: 0;
                 margin-top: 26px;
+                @media #{$media-down}{
+                    width: 256px;
+                    font-size: 14px;
+                    margin-top: 16px;
+                }
             }
             .choose_label{
                 font-family: $font-family_semiBold;
@@ -166,15 +282,26 @@
             .adresses{
                 display: flex;
                 margin-top: 24px;
+                @media #{$media-down}{
+                    flex-direction: column;
+                    margin-top: 16px;
+                }
                 .adress{
                     display: flex;
                     width: 180px;
                     height: 44px;
                     margin-right: 89px;
                     margin-bottom: 32px;
+                    @media #{$media-down}{
+                        margin-bottom: 0;
+                        align-items: center;
+                    }
                     .adress__img{
                         display: flex;
                         align-items: center;
+                        @media #{$media-down}{
+                            justify-content: center;
+                        }
                         .map_pin_small{
                             margin-right: 16px;
                             width: 24px;
@@ -184,10 +311,18 @@
                     .adress__box_label{
                         display: flex;
                         flex-direction: column;
+                        @media #{$media-down}{
+                            flex-direction: row;
+                        }
                         .adress_label{
                             width: 180px;
                             font-family: $font-family_regular;
                             margin: 5px;
+                            @media #{$media-down}{
+                                width: 145px;
+                                margin: 0;
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
@@ -197,24 +332,46 @@
 }
 
 @mixin box_service {
+    .general{
+        @media #{$media-down}{
+            margin-left: 16px;
+        }
+    }
     .boxes_services{
         display: flex;
         width: 100%;
+        @media #{$media-down}{
+            display: block;
+        }
     }
     .box_services_a{
         margin-right: 202px;
         margin-top: 96px;
         margin-left: 56px;
+        @media #{$media-down}{
+            width: 345px;
+            margin-top: 37px;
+            margin-left: 16px;
+            margin-right: 0;
+        }
         .box_services_a_title{
             width: 490px;
             height: 40px;
             font-size: 34px;
             font-family: $font-family_bold;
+            @media #{$media-down}{
+                width: 345px;
+                font-size: 24px;
+            }
         }
         .box_services_a_title_label{
             font-family: $font-family_regular;
             font-size: 17px;
             margin: 8px;
+            @media #{$media-down}{
+                margin: 0;
+                width: 345px;
+            }
         }
 
     }
@@ -222,6 +379,12 @@
         margin-top: 96px;
         margin-right: 56px;
         font-family: $font-family_regular;
+        @media #{$media-down}{
+            width: 375px;
+            margin-right: 0;
+            margin-left: 16px;
+            margin-top: 50px;
+        }
         .box{
             width: 636px;
             height: 504px;
@@ -231,22 +394,37 @@
             box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 25%);
             font-size: 20px;
             padding-left: 20px;
+            @media #{$media-down}{
+                width: 345px;
+                height: 435px;
+                margin-top: 0;
+            }
             .title{
                 font-family: $font-family_semiBold;
             }
             .box_a_label{
                 color: $color-gray;
+                @media #{$media-down}{
+                    font-size: 14px;
+                }
             }
         }
         .box_b{
             width: 636px;
             height: 424px;
             margin-top: 40px;
+            @media #{$media-down}{
+                width: 345px;
+                height: 385px;
+            }
             .box_b_title{
                 font-family: $font-family_semiBold;
             }
             .box_b_label{
                 color: $color-gray;
+                @media #{$media-down}{
+                    font-size: 14px;
+                }
             }
         }
 
@@ -257,10 +435,18 @@
         width: 719px;
         height: 40px;
         text-align: center;
+        @media #{$media-down}{
+            width: 375px;
+            margin-left: 0;
+        }
         .formule_title_label{
             font-size: 32px;
             margin-top: 120px;
             font-family: $font-family_bold;
+            @media #{$media-down}{
+                font-size: 25px;
+                margin-top: 51px;
+            }
         }
         .formule_title_logo{
             display: flex;
@@ -273,6 +459,12 @@
         margin-right: 39px;
         display: flex;
         justify-content: space-between;
+        @media #{$media-down}{
+            display: block;
+            margin-right: 0;
+            margin-left: 16px;
+            width: 375px;
+        }
         .box_formules{
             width: 405px;
             height: 565px;
@@ -280,10 +472,25 @@
             border: 1px solid $color-green_light;
             border-radius: 16px;
             box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 25%);
+            @media #{$media-down}{
+                width: 345px;
+                margin-top: 16px;
+            }
+            .boxes_details{
+                @media #{$media-down}{
+                    margin-left: 36px;
+                }
+            }
             .box_formules_badge{
                 margin-left: 24px;
+                @media #{$media-down}{
+                    margin-left: 0;
+                }
                 .box_formules_title{
                     display: flex;
+                    @media #{$media-down}{
+                        margin-left: 7px;
+                    }
                     .box_formules_title_leaf{
                         width: 92px;
                         height: 92px;
@@ -339,6 +546,10 @@
                 margin-top: 60px;
                 display: flex;
                 margin-left: 148px;
+                @media #{$media-down}{
+                    margin-top: 30px;
+                    margin-left: 127px;
+                }
                 .box_formules_number{
                     font-size: 32px;
                     font-weight: bolder;
@@ -356,6 +567,9 @@
                 height: 56px;
                 font-size: 18px;
                 background-color: white;
+                @media #{$media-down}{
+                    margin-left: 60px;
+                }
             }
         }
     }
@@ -381,6 +595,9 @@
         .formule_title_label{
             font-size: 32px;
             font-family: $font-family_bold;
+            @media #{$media-down}{
+                font-size: 26px;
+            }
         }
         .formule_title_logo{
             display: flex;
@@ -391,6 +608,10 @@
         display: flex;
         margin-top: 116px;
         justify-content: space-between;
+        @media #{$media-down}{
+            display: block;
+            margin-left: 16px;
+        }
         .box_worker{
             display: flex;
             flex-direction: column;
@@ -398,6 +619,11 @@
             align-items: center;
             width: 256px;
             height: 374px;
+            @media #{$media-down}{
+                width: 345px;
+                margin-left: 0;
+                margin-top: 32px;
+            }
         }
         .box_worker_img{
             width: 232px;
@@ -414,6 +640,9 @@
             color: $color-gray;
             font-family: $font-family_regular;
             font-size: 14px;
+            @media #{$media-down}{
+               font-size: 16px;
+            }
         }
         .hidden{
             color: transparent;
@@ -425,6 +654,12 @@
         font-family: $font-family_regular;
         font-size: 18px;
         margin-top: 80px;
+        @media #{$media-down}{
+            width: 345px;
+            height: 310px;
+            margin-left: 16px;
+            text-align: center;
+        }
         .box_worker_details_label{
             margin: 8px;
         }
@@ -439,6 +674,13 @@
         margin-left: 320px;
         background-color: white;
         border: 1px solid $color-green_light;
+        border-radius: 28px;
+        @media #{$media-down}{
+            width: 345px;
+            height: 524px;
+            margin-left: 16px;
+            border-radius: 28px;
+        }
         input{
             border: transparent;
             outline: none;
@@ -451,11 +693,23 @@
             width: 640px;
             height: 80px;
             border-bottom: 1px solid $color-green;
+            @media #{$media-down}{
+                margin-top: 40px;
+                margin-left: 16px;
+                width: 280px;
+                height: 60px;
+                font-size: 22px;
+            }
         }
         .form_a{
             margin-top: 41px;
             margin-left: 80px;
             display: flex;
+            @media #{$media-down}{
+                display: block;
+                margin-left: 16px;
+                margin-top: 20px;
+            }
             .form_label{
                 font-family: $font-family_regular;
                 border-bottom: 1px solid rgb(199, 183, 183);
@@ -464,12 +718,20 @@
                 display: flex;
                 flex-direction: column;
                 margin-right: 80px;
+                @media #{$media-down}{
+                    margin-bottom: 16px;
+                }
             }
         }
         .form_b{
             margin-top: 40px;
             margin-left: 80px;
             display: flex;
+            @media #{$media-down}{
+                display: block;
+                margin-left: 16px;
+                margin-top: 16px;
+            }
             .form_label{
                 font-family: $font-family_regular;
                 border-bottom: 1px solid rgb(199, 183, 183);
@@ -478,11 +740,18 @@
                 display: flex;
                 flex-direction: column;
                 margin-right: 80px;
+                @media #{$media-down}{
+                    margin-bottom: 16px;
+                }
             }
         }
         .form_c{
             margin-top: 40px;
             margin-left: 80px;
+            @media #{$media-down}{
+                margin-left: 16px;
+                margin-top: 16px;
+            }
             .form_c_yourMessage{
                 font-family: $font-family_regular;
                 width: 640px;
@@ -490,6 +759,10 @@
                 border-bottom: 1px solid rgb(199, 183, 183);
                 display: flex;
                 flex-direction: column;
+                @media #{$media-down}{
+                    height: 60px;
+                    width: 280px;
+                }
             }
         }
         .box_contact_submit{
@@ -498,8 +771,11 @@
             @include btn_formule;
             background-color: rgb(209, 213, 216);
             color: white;
-            box-shadow: none
-
+            box-shadow: none;
+            @media #{$media-down}{
+                margin-left: 63px;
+                margin-top: 35px;
+            }
         }
     }
 }
@@ -508,13 +784,27 @@
     font-family: $font-family_regular;
     font-size: 12px;
     color: white;
+    width: 375px;
     .box_footer_a{
         display: flex;
+        @media #{$media-down}{
+            display: block;
+            width: 168px;
+            height: 40px;
+            margin-left: 16px;
+        }
         .footer_logo_gray{
             margin-top: 96px;
             margin-left: 56px;
             width: 219px;
             height: 56px;
+            @media #{$media-down}{
+                content: url("/logos/logo_footer_myDom_resp.png");
+                width: 168px;
+                height: 40px;
+                margin-top: 32px;
+                margin-left: 0;
+            }
         }
     }
     .footer_details{
@@ -522,15 +812,27 @@
         margin-left: 127px;
         width: 636px;
         height: 100px;
+        @media #{$media-down}{
+            width: 325px;
+            margin-left: 0;
+            margin-top: 10px;
+        }
     }
     .footer_details_contact{
         margin-top: 104px;
         margin-left: 56px;
         width: 234px;
         height: 100px;
+        @media #{$media-down}{
+            margin-top: 50px;
+            margin-left: 0;
+        }
     }
     .box_footer_b{
         display: flex;
+        @media #{$media-down}{
+            display: none;
+        }
         .footer_b_details{
             margin-top: 100px;
             margin-left: 56px;
@@ -544,5 +846,13 @@
         margin-top: 48px;
         margin-left: 288px;
         display: flex;
+        @media #{$media-down}{
+            width: 345px;
+            display: block;
+            margin-top: 310px;
+            margin-left: 16px;
+            text-align: center;
+            font-size: 11px;
+        }
     }
 }

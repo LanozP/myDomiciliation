@@ -26,7 +26,10 @@
 
 body{
     padding: 32px;
-    overflow-x: hidden;
+    @media #{$media-down} {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 *{
@@ -36,6 +39,11 @@ body{
 .container{
     width: 1440px;
     margin: 0 auto;
+    overflow-x: hidden;
+    @media #{$media-down} {
+        width: 375px;
+        overflow: hidden;
+    }
 }
 
 .header{
@@ -45,25 +53,26 @@ body{
         flex-direction: row;
         img{
             margin-right: 34px;
+            @media #{$media-down} {
+                content: url("/logos/logo_dom_resp.png");
+                width: 167px;
+                height: 40px;
+                margin-top: 16px;
+                margin-left: 0;
+            }
         }
         .box_nav{
             display: flex;
             align-items: center;
+            @media #{$media-down} {
+                display: none;
+            }
             a{
                 width: 82px;
                 height: 20px;
                 font-size: 16px;
                 margin-right: 25px;
             }
-        }
-    }
-    .label_agence{
-        display: flex;
-        flex-direction: column;
-        .label_1{
-            width: 234px;
-            height: 56px;
-            font-size: 20px;
         }
     }
     .phone_number{
@@ -81,18 +90,30 @@ body{
         background-color: black;
         box-shadow: 1px 0px 16px 0px rgb(0 0 0 / 35%);
         font-size: 18px;
+        @media #{$media-down} {
+            display: none;
+        }
     }
 }
 
 .presentation{
     margin-top: 322px;
     margin-left: 56px;
+    @media #{$media-down} {
+        margin-top: 50px;
+        margin-left: 0;
+    }
     @include box_presentation;
 }
 
 .avantages{
     margin-top: 200px;
     margin-left: 56px;
+    @media #{$media-down} {
+        width: 375px;
+        margin-top: 40px;
+        margin-left: 16px;
+    }
     @include box_avantages;
 }
 
@@ -100,23 +121,44 @@ body{
     display: flex;
     margin-top: 100px;
     margin-left: 56px;
+    @media #{$media-down}{
+        width: 375px;
+        height: 900px;
+        display: inline-block;
+        margin-left: 16px;
+        margin-top: 20px;
+    }
     @include box_info;
 }
 
 .box_adress{
+    position: relative;
     display: flex;
     margin-top: 284px;
     margin-left: 0px;
     width: 1493px;
     height: 652px;
-    background-image: url("/logos/bitmap_map.png");
+    @media #{$media-down}{
+        display: block;
+        position: relative;
+        width: 375px;
+        height: 544px;
+        margin-top: 40px;
+    }
     @include box_adress;
 }
 
 .box_services{
+    @media #{$media-down}{
+        width: 375px;
+    }
     .background_image{
         position: absolute;
         top: 2465px;
+        @media #{$media-down}{
+            top: 3620px;;
+            display: none;
+        }
     }
     .general{
         position: relative;
@@ -129,6 +171,13 @@ body{
     margin-left: 180px;
     width: 1080px;
     height: 748px;
+    @media #{$media-down}{
+        width: 375px;
+        height: 1770px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 80px;
+    }
     @include box_about_us;
 }
 
@@ -138,6 +187,11 @@ body{
     height: 868px;
     margin-top: 157px;
     background-image: url("/logos/bitmap_laptop.png");
+    @media #{$media-down}{
+        width: 375px;
+        height: 750px;
+        margin-top: 60px;
+    }
     @include box_contact;
 }
 
@@ -146,6 +200,10 @@ body{
     height: 510px;
     background-color: $color-black;
     border-top: 8px solid $color-green;
+    @media #{$media-down}{
+        width: 375px;
+        height: 425px;
+    }
     p{
         margin: 7px
     }
