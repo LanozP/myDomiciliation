@@ -62,16 +62,22 @@ body{
             }
         }
         .box_nav{
+            z-index: 1;
             display: flex;
             align-items: center;
             @media #{$media-down} {
                 display: none;
             }
             a{
+                text-align: center;
+                font-family: $font-family_regular;
                 width: 82px;
                 height: 20px;
                 font-size: 16px;
                 margin-right: 25px;
+                cursor: pointer;
+                text-decoration: none;
+                color: black;
             }
         }
     }
@@ -154,10 +160,11 @@ body{
     }
     .background_image{
         position: absolute;
-        top: 2465px;
+        top: 2540px;
         @media #{$media-down}{
-            top: 3620px;;
-            display: none;
+            width: 100%;
+            height: 1875px;
+            top: 3620px;
         }
     }
     .general{
@@ -186,11 +193,20 @@ body{
     width: 1440px;
     height: 868px;
     margin-top: 157px;
-    background-image: url("/logos/bitmap_laptop.png");
     @media #{$media-down}{
         width: 100%;
-        height: 750px;
+        height: 636px;
         margin-top: 60px;
+    }
+    .background_image_contact{
+        position: absolute;
+        width: 1440px;
+        height: 868px;
+        @media #{$media-down}{
+            content: url("/logos/bitmap_laptop_responsive.png");
+            width: 100%;
+            height: 636px;
+        }
     }
     @include box_contact;
 }

@@ -10,9 +10,11 @@
             margin-top: -961px;
             margin-left: 455px;
             @media #{$media-down} {
-                width: 338px;
-                height: 338px;
-                margin-top: -370px;
+                position: absolute;
+                content: url("/logos/image_coffee_responsive_2.png");
+                width: 621px;
+                height: 719px;
+                margin-top: -536px;
                 margin-left: 37px;
             }
         }
@@ -122,7 +124,7 @@
                     display: flex;
                     align-items: center;
                     @media #{$media-down}{
-                        font-size: 14px;
+                        font-size: 15px;
                     }
                 }
             }            
@@ -174,7 +176,7 @@
                     display: flex;
                     align-items: center;
                     @media #{$media-down}{
-                        font-size: 14px;
+                        font-size: 15px;
                     }
                 }
             }            
@@ -361,7 +363,6 @@
             font-size: 34px;
             font-family: $font-family_bold;
             @media #{$media-down}{
-                width: 90%;
                 font-size: 24px;
             }
         }
@@ -371,7 +372,6 @@
             margin: 8px;
             @media #{$media-down}{
                 margin: 0;
-                width: 90%;
             }
         }
 
@@ -667,6 +667,7 @@
 
 @mixin box_contact{
     .box_contact_form{
+        position: relative;
         width: 800px;
         height: 636px;
         margin-top: 116px;
@@ -675,9 +676,11 @@
         border: 1px solid $color-green_light;
         border-radius: 28px;
         @media #{$media-down}{
+            position: relative;
             width: 90%;
             height: 524px;
-            margin-left: 16px;
+            margin-left: 18px;
+            margin-top: 56px;
             border-radius: 28px;
         }
         input{
