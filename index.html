@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1">
 
     <title>myDomiciliation</title>
 
     <link rel="stylesheet" href="./public/css/style.css">
 
+
+    <script>
+        var menuIsOpen = false;
+        function openMenu() {
+            document.getElementById("menu").classList = "open";
+            document.body.classList = "noscroll";
+            menuIsOpen = true;
+        }
+        function closeMenu() {
+            document.getElementById("menu").classList = "";
+            document.body.classList = "";
+            menuIsOpen = false;
+        }
+
+        function toggleMenu() {
+            if (menuIsOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+    </script>
+
 </head>
     <body>
+
+        <div id="menu">
+            <img class="toggle_img" src="/logos/tuggle_background.png">
+            <img class="toggle_logo" src="/logos/logo_footer_myDom_resp.png" alt="">
+            <div class="toggle_close" onclick="toggleMenu()">
+                <img src="/logos/close_menu.png" alt="">
+            </div>
+            <div class="toggle_label">
+                <a href="#avantages">Avantages</a>
+                <a href="#services">Services</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="#aPropos">A propos</a>
+                <a id="contact" href="#contact">Contact</a>
+
+                <div class="phone_number_2">Nous appeler au 01 44 77 81 85</div>
+            </div>
+        </div>
         
         <div class="container">
-            
+
             <!-- HEADER START -->
             <header class="header">
                 <nav>
@@ -27,6 +67,10 @@
                     </div>
 
                     <div class="phone_number">Nous appeler au 01 44 77 81 85</div>
+
+                    <div class="toggleMenu" onclick="javascript:toggleMenu()" style="z-index: 10">
+                        <img src="/logos/tuggle_menu.png" alt="">
+                    </div>
                 </nav>
             </header>
             <!-- HEADER END -->

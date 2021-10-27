@@ -14,9 +14,11 @@
   font-family: "inter_SemiBold";
   src: url("/police/Inter-SemiBold.otf");
 }
-body {
-  padding: 32px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
+
 @media only screen and (max-width: 375px) {
   body {
     padding: 0;
@@ -28,8 +30,89 @@ body {
   box-sizing: border-box;
 }
 
+.noscroll {
+  overflow: hidden;
+  position: fixed;
+}
+
+#menu {
+  display: none;
+}
+@media only screen and (max-width: 375px) {
+  #menu {
+    background-image: url("/logos/tuggle_background.png");
+    object-fit: cover;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+    left: 100%;
+    transition: left 300ms;
+    overflow: auto;
+    display: flex;
+  }
+  #menu.open {
+    left: 0%;
+  }
+  #menu .toggle_logo {
+    width: 205px;
+    height: 50px;
+    position: absolute;
+    top: 16px;
+    left: 25px;
+  }
+  #menu .toggle_close {
+    position: absolute;
+    right: 25px;
+    top: 22px;
+  }
+  #menu .toggle_label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    margin-top: 120px;
+    margin-left: 25px;
+    width: 85%;
+    font-family: "inter_Regular";
+  }
+  #menu .toggle_label a {
+    text-decoration: none;
+    color: white;
+    height: 72px;
+    margin-bottom: 20px;
+    margin-top: 24px;
+    border-bottom: 1px solid white;
+  }
+  #menu .toggle_label #contact {
+    border-bottom: 0px;
+  }
+  #menu .toggle_label .phone_number_2 {
+    font-size: 18px;
+    width: 251px;
+    height: 56px;
+    border: 0px solid transparent;
+    border-radius: 28px;
+    text-align: center;
+    background-color: #38DEAE;
+    box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    padding-top: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 90%;
+    height: 44px;
+    background-color: black;
+    color: white;
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 14px;
+  }
+}
+
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -44,6 +127,11 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
+}
+@media only screen and (max-width: 375px) {
+  .header nav {
+    justify-content: space-between;
+  }
 }
 .header nav .logo {
   margin-right: 34px;
@@ -99,6 +187,23 @@ body {
     display: none;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .header .phone_number {
+    display: none;
+  }
+}
+.header .toggleMenu {
+  display: none;
+}
+@media only screen and (max-width: 375px) {
+  .header .toggleMenu {
+    width: 24px;
+    height: 19px;
+    display: flex;
+    margin-right: 16px;
+    margin-top: 27px;
+  }
+}
 
 .presentation {
   margin-top: 322px;
@@ -117,7 +222,6 @@ body {
 }
 .presentation .box_presentation .box_presentation_img {
   position: absolute;
-  width: 1194px;
   height: 1593px;
   margin-top: -961px;
   margin-left: 455px;
@@ -126,10 +230,15 @@ body {
   .presentation .box_presentation .box_presentation_img {
     position: absolute;
     content: url("/logos/image_coffee_responsive_2.png");
-    width: 621px;
-    height: 719px;
-    margin-top: -536px;
-    margin-left: 37px;
+    width: 340px;
+    height: 431px;
+    margin-top: -380px;
+    margin-left: 35px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .presentation .box_presentation .box_presentation_img {
+    display: none;
   }
 }
 .presentation .box_presentation .title {
@@ -249,6 +358,13 @@ body {
     margin-top: 20px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
 .info .box {
   width: 405px;
   height: 132px;
@@ -262,11 +378,22 @@ body {
     display: table;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .info .box {
+    display: flex;
+    margin-top: 50px;
+  }
+}
 @media only screen and (max-width: 375px) {
   .info .box .box_info_a {
     width: 90%;
     height: 136px;
     margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .info .box .box_info_a {
+    margin-right: 50px;
   }
 }
 .info .box .box_info_a .box_info_img {
@@ -310,11 +437,12 @@ body {
 }
 .info .box .box_info_a .box_sep_label .info_label {
   color: #8a98a2;
-  font-size: 16px;
+  font-size: 19px;
   margin-bottom: 56px;
 }
 @media only screen and (max-width: 375px) {
   .info .box .box_info_a .box_sep_label .info_label {
+    font-size: 16px;
     margin-bottom: 16px;
   }
 }
@@ -323,6 +451,11 @@ body {
     width: 90%;
     height: 136px;
     margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .info .box .box_info_b {
+    margin-right: 50px;
   }
 }
 .info .box .box_info_b .box_info_img {
@@ -366,10 +499,11 @@ body {
 }
 .info .box .box_info_b .box_sep_label .info_label {
   color: #8a98a2;
-  font-size: 16px;
+  font-size: 19px;
 }
 @media only screen and (max-width: 375px) {
   .info .box .box_info_b .box_sep_label .info_label {
+    font-size: 16px;
     margin-bottom: 16px;
   }
 }
@@ -399,6 +533,12 @@ body {
     margin-top: 40px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .box_adress {
+    display: flex;
+    margin-top: 100px;
+  }
+}
 .box_adress .background_map {
   position: absolute;
   width: 1493px;
@@ -407,9 +547,14 @@ body {
 @media only screen and (max-width: 375px) {
   .box_adress .background_map {
     position: absolute;
-    width: 375px;
+    width: 100%;
     height: 544px;
     object-fit: cover;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .box_adress .background_map {
+    width: 100%;
   }
 }
 .box_adress .map_pin {
@@ -423,6 +568,11 @@ body {
   .box_adress .map_pin {
     margin-top: 300px;
     margin-left: 110px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .box_adress .map_pin {
+    display: none;
   }
 }
 .box_adress .adress_info {
@@ -444,6 +594,11 @@ body {
     margin-left: 20px;
     opacity: 0.9;
     margin-top: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .box_adress .adress_info {
+    margin-left: 250px;
   }
 }
 .box_adress .adress_info .adress_info__box {
@@ -541,11 +696,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 375px) {
-  .box_services {
-    width: 100%;
-  }
-}
 .box_services .background_image {
   position: absolute;
   top: 2540px;
@@ -572,6 +722,13 @@ body {
 @media only screen and (max-width: 375px) {
   .box_services .general .boxes_services {
     display: block;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .box_services .general .boxes_services {
+    display: flex;
+    flex-direction: column;
+    margin-left: 185px;
   }
 }
 .box_services .general .box_services_a {
@@ -834,13 +991,8 @@ body {
     width: 214px;
     height: 48px;
     margin-top: 24px;
-    margin-left: 16px;
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .box_services .general .boxes_formules .box_formules_choice .box_formules_choice_b {
     margin-left: 60px;
+    font-size: 16px;
   }
 }
 .box_services .general .box_formules:hover {
@@ -1120,15 +1272,9 @@ body {
   .box_contact .box_contact_form .box_contact_submit {
     width: 214px;
     height: 48px;
-    margin-top: 24px;
-    margin-left: 16px;
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 375px) {
-  .box_contact .box_contact_form .box_contact_submit {
-    margin-left: 63px;
     margin-top: 35px;
+    margin-left: 63px;
+    font-size: 16px;
   }
 }
 
